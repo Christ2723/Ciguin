@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ciguín y la Leyenda del Galipote — Documentación</title>
+<style>
+  @page { size: Letter; margin: 18mm 16mm 18mm 16mm; }
+  :root { --azul:#1f5fa8; --rojo:#c8282e; --oro:#e8a516; --tinta:#1d1f24; --gris:#5b6270; --fondo:#f4f6fa; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--tinta); font-size: 10.5pt; line-height: 1.45; margin: 0; }
+  h1 { font-size: 21pt; color: var(--azul); margin: 0 0 6px; border-bottom: 3px solid var(--oro); padding-bottom: 4px; }
+  h2 { font-size: 13.5pt; color: var(--azul); margin: 16px 0 6px; }
+  h3 { font-size: 11.5pt; margin: 12px 0 4px; }
+  p { margin: 4px 0 8px; }
+  .pagina { page-break-after: always; }
+  .pagina:last-child { page-break-after: auto; }
+  img.px { image-rendering: pixelated; image-rendering: crisp-edges; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 10pt; }
+  th { background: var(--azul); color: #fff; text-align: left; padding: 5px 7px; }
+  td { border-bottom: 1px solid #d8dde6; padding: 5px 7px; vertical-align: middle; }
+  tr:nth-child(even) td { background: var(--fondo); }
+  .icono { width: 48px; text-align: center; }
+  .icono img { width: 40px; height: 40px; object-fit: contain; }
+  .captura { width: 100%; border-radius: 6px; border: 1px solid #c9ced8; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pie { font-size: 8.5pt; color: var(--gris); text-align: center; margin-top: 2px; }
+  .ficha td:first-child { font-weight: 600; width: 32%; }
+  .nota { background: #fff7e0; border-left: 4px solid var(--oro); padding: 6px 10px; margin: 8px 0; }
+  .flujo { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
+  .caja { border: 2px solid var(--azul); border-radius: 8px; padding: 6px 10px; font-weight: 600; background: #eef4fc; font-size: 9.5pt; text-align: center; }
+  .flecha { color: var(--gris); font-weight: 700; }
+  /* Portada */
+  .portada { text-align: center; padding-top: 30mm; }
+  .portada .titulo { font-size: 34pt; font-weight: 800; color: var(--azul); margin: 10px 0 0; letter-spacing: 1px; }
+  .portada .sub { font-size: 17pt; color: var(--rojo); margin: 4px 0 20px; font-weight: 600; }
+  .portada .personajes { display: flex; justify-content: center; align-items: flex-end; gap: 40px; margin: 20px 0 26px; }
+  .portada .datos { font-size: 12pt; line-height: 1.8; margin-top: 18px; }
+  .portada .enlaces { margin-top: 26px; font-size: 11pt; }
+  a { color: var(--azul); }
+  .guion p { margin: 3px 0 7px; }
+  .guion b { color: var(--rojo); }
+</style>
+</head>
+<body>
+
+<!-- ============ PORTADA ============ -->
+<section class="pagina portada">
+  <div style="font-size:11pt;color:var(--gris);letter-spacing:2px;">DOCUMENTO DE DISEÑO DEL VIDEOJUEGO</div>
+  <div class="titulo">CIGUÍN</div>
+  <div class="sub">y la Leyenda del Galipote</div>
+  <div class="personajes">
+    <img class="px" src="../Assets/Sprites/Ciguin_Quieto.png" width="160">
+    <img class="px" src="../Assets/Sprites/Larimar.png" width="60">
+    <img class="px" src="../Assets/Sprites/Galipote_1.png" width="200">
+  </div>
+  <img class="captura" src="capturas/menu_0.png" style="width:78%">
+  <div class="datos">
+    <b>Asignatura:</b> Programación de Videojuegos<br>
+    <b>Profesor:</b> Iván Mendoza<br>
+    <b>Alumno:</b> Christopher Payero Estrella &nbsp;·&nbsp; <b>Matrícula:</b> 1-21-0909<br>
+    <b>Fecha:</b> noviembre de 2026
+  </div>
+  <div class="enlaces">
+    <b>Repositorio GitHub:</b> <a href="https://github.com/Christ2723/Ciguin">https://github.com/Christ2723/Ciguin</a><br>
+    <b>Juego publicado:</b> <a href="https://christ2723.github.io/Ciguin/">https://christ2723.github.io/Ciguin/</a>
+  </div>
+</section>
+
+<!-- ============ FICHA E HISTORIA ============ -->
+<section class="pagina">
+  <h1>1. Ficha técnica</h1>
+  <table class="ficha">
+    <tr><td>Título</td><td>Ciguín y la Leyenda del Galipote</td></tr>
+    <tr><td>Tipo de juego (género)</td><td>Plataformas 2D de desplazamiento lateral (estilo Mario): saltar, esquivar, recoger objetos y llegar a la meta antes de que se acabe el tiempo.</td></tr>
+    <tr><td>Clasificación</td><td><b>ESRB E (Todos)</b> / <b>PEGI 7</b> — violencia caricaturesca leve (saltar sobre enemigos de fantasía), sin sangre, sin lenguaje ofensivo ni compras.</td></tr>
+    <tr><td>Público objetivo</td><td>Niños, jóvenes y adultos que disfrutan los plataformas clásicos; partidas cortas de 5 a 10 minutos.</td></tr>
+    <tr><td>Jugadores</td><td>1 jugador</td></tr>
+    <tr><td>Plataforma</td><td>Navegador web (WebGL, publicado en GitHub Pages) y Windows.</td></tr>
+    <tr><td>Motor y lenguaje</td><td>Unity 6 (6000.6.4f1), C#. Física 2D, sprites en pixel art (16 píxeles = 1 unidad).</td></tr>
+    <tr><td>Estilo visual</td><td>Pixel art de 16 bits con paleta tropical; temática dominicana (cigua palmera, larimar, mango, casitas de Samaná, bandera dominicana en la meta).</td></tr>
+    <tr><td>Arte y sonido</td><td>Originales: los personajes, enemigos, objetos, escenarios, efectos y las 6 melodías fueron creados para este juego (generados por código en <code>Assets/Editor</code>), por lo que no se repiten en juegos de compañeros.</td></tr>
+    <tr><td>Niveles</td><td>3 niveles + jefe final, menú de inicio y pantalla de victoria.</td></tr>
+  </table>
+
+  <h1 style="margin-top:18px">2. Historia</h1>
+  <p>En una isla del Caribe vive <b>Ciguín</b>, una pequeña <i>cigua palmera</i> (el ave nacional de la República Dominicana) que nunca se quita su sombrero de guano. La isla es famosa por el <b>larimar</b>, una piedra azul que solo se encuentra allí y que mantiene la alegría de su gente.</p>
+  <p>Una noche de luna llena aparece el <b>Galipote</b>, el ser del folclor dominicano capaz de cambiar de forma. Se roba todos los larimares y llena la playa, las cuevas y las lomas de criaturas que le obedecen: cangrejos gruñones, murciélagos, cactus que escupen espinas y trampas por todas partes.</p>
+  <p>Ciguín decide recuperar los larimares. Debe cruzar la <b>Playa de Samaná</b>, atravesar la <b>Cueva de las Maravillas</b> y subir a la <b>Loma del Galipote</b>, donde lo espera el monstruo para la batalla final. Si cae, tendrá que empezar de nuevo desde la playa.</p>
+
+  <h2>Objetivo del juego</h2>
+  <p>Llegar a la bandera de cada nivel antes de que el tiempo llegue a cero, sin perder todas las vidas, y derrotar al Galipote en el tercer nivel.</p>
+</section>
+
+<!-- ============ PERSONAJES ============ -->
+<section class="pagina">
+  <h1>3. Personajes</h1>
+  <h2>Ciguín (jugador)</h2>
+  <div style="display:flex;gap:14px;align-items:flex-end;margin:6px 0 10px;">
+    <img class="px" src="../Assets/Sprites/Ciguin_Quieto.png" width="80">
+    <img class="px" src="../Assets/Sprites/Ciguin_Paso1.png" width="80">
+    <img class="px" src="../Assets/Sprites/Ciguin_Paso3.png" width="80">
+    <img class="px" src="../Assets/Sprites/Ciguin_Salto.png" width="80">
+    <img class="px" src="../Assets/Sprites/Ciguin_Herido.png" width="80">
+    <img class="px" src="../Assets/Sprites/Ciguin_Celebra.png" width="80">
+  </div>
+  <p class="pie" style="text-align:left">Quieto · caminar · caminar · salto · herido · celebrando</p>
+  <p>Cigua palmera verde oliva con pecho blanco rayado, pico naranja, pañuelo rojo y sombrero de guano. <b>Puede:</b></p>
+  <ul>
+    <li><b>Moverse</b> con aceleración y <b>correr</b> (Shift).</li>
+    <li><b>Saltar</b>: el salto es más alto si se mantiene el botón (salto variable); incluye <i>coyote time</i> y memoria del botón para que se sienta preciso.</li>
+    <li><b>Saltar encima de los enemigos</b> para vencerlos y rebotar.</li>
+    <li><b>Golpear bloques</b> con la cabeza: los bloques sorpresa sueltan larimares o un mango, los ladrillos se rompen y los golpes derriban a los enemigos que estén encima.</li>
+  </ul>
+  <p>Tiene <b>3 vidas</b> (corazones, máximo 5). Al recibir daño pierde una vida, sale despedido hacia atrás y queda invulnerable un momento (parpadea).</p>
+
+  <h2>El Galipote (jefe final)</h2>
+  <div style="display:flex;gap:16px;align-items:flex-end;margin:6px 0;">
+    <img class="px" src="../Assets/Sprites/Galipote_1.png" width="110">
+    <img class="px" src="../Assets/Sprites/Galipote_Ataque.png" width="110">
+    <img class="px" src="../Assets/Sprites/Galipote_Herido.png" width="110">
+  </div>
+  <p>Bestia peluda con cuernos y ojos amarillos, inspirada en la leyenda dominicana del galipote. Tiene <b>6 puntos de vida</b> y solo recibe daño cuando Ciguín le salta encima. Ataques:</p>
+  <ul>
+    <li><b>Salto sísmico:</b> salta hacia Ciguín; al caer tiembla la pantalla y caen piedras del cielo.</li>
+    <li><b>Bolas de fuego:</b> lanza 3 bolas en arco (5 cuando está furioso).</li>
+    <li><b>Embestida:</b> se agacha temblando como aviso y corre hasta chocar con la pared.</li>
+    <li><b>Furia:</b> con la mitad de la vida se vuelve rojizo, más rápido y ataca más seguido.</li>
+  </ul>
+</section>
+
+<!-- ============ ENEMIGOS Y OBJETOS ============ -->
+<section class="pagina">
+  <h1>4. Enemigos y obstáculos</h1>
+  <p>El juego tiene <b>8 tipos</b> de enemigos u obstáculos (el mínimo pedido es 5):</p>
+  <table>
+    <tr><th class="icono"></th><th>Nombre</th><th>Comportamiento</th><th>¿Cómo se vence?</th></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Cangrejo_1.png"></td><td><b>Cangrejo</b></td><td>Camina de lado y se da la vuelta en paredes y bordes.</td><td>Saltarle encima o golpear el bloque donde está.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Murcielago_1.png"></td><td><b>Murciélago</b></td><td>Vuela en ondas y se lanza en picada cuando Ciguín pasa debajo.</td><td>Saltarle encima.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Cactus_1.png"></td><td><b>Cactus lanzador</b></td><td>Abre la boca y lanza espinas en arco hacia Ciguín.</td><td>No se puede pisar (tiene espinas): hay que esquivarlo.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Coco.png"></td><td><b>Coco</b> (niveles 1 y 3)</td><td>Cuelga de las palmeras, tiembla y cae cuando Ciguín pasa debajo.</td><td>Esquivarlo.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Estalactita.png"></td><td><b>Estalactita</b> (nivel 2)</td><td>Se desprende del techo de la cueva.</td><td>Esquivarla.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Puas.png"></td><td><b>Púas</b></td><td>Trampa fija en el suelo.</td><td>Saltarla o pasar por la plataforma de arriba.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Plataforma_Cae.png"></td><td><b>Plataforma que se cae</b></td><td>Tiembla al pisarla y cae al vacío; reaparece a los 4 s.</td><td>Cruzarla rápido.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Playa_Agua0.png"></td><td><b>Agua / vacío</b></td><td>Los hoyos entre plataformas.</td><td>Caer cuesta una vida y se reaparece en el último punto de control.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Galipote_1.png"></td><td><b>El Galipote</b> (jefe)</td><td>Salto sísmico, bolas de fuego y embestida.</td><td>Saltarle encima 6 veces.</td></tr>
+  </table>
+
+  <h1 style="margin-top:14px">5. Objetos</h1>
+  <table>
+    <tr><th class="icono"></th><th>Objeto</th><th>Efecto</th></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Larimar.png"></td><td><b>Larimar</b></td><td>+100 puntos. Cada 50 larimares = 1 vida extra.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Mango.png"></td><td><b>Mango</b></td><td>Sale de algunos bloques sorpresa y se desliza; al comerlo da +1 vida (+1000 puntos).</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Bloque_Sorpresa1.png"></td><td><b>Bloque sorpresa</b></td><td>Suelta un larimar, varios larimares o un mango; luego queda vacío.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Playa_Ladrillo.png"></td><td><b>Ladrillo</b></td><td>Se rompe al golpearlo desde abajo (+50 puntos).</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Plataforma.png"></td><td><b>Plataforma de madera</b></td><td>Se atraviesa desde abajo; algunas se mueven de lado a lado.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/PuntoControl_Activo.png"></td><td><b>Punto de control</b></td><td>Si Ciguín cae al vacío reaparece aquí.</td></tr>
+    <tr><td class="icono"><img class="px" src="../Assets/Sprites/Bandera_Meta.png"></td><td><b>Bandera (meta)</b></td><td>Completa el nivel; da más puntos cuanto más alto se toque el poste. El tiempo sobrante se suma como bono (x10).</td></tr>
+  </table>
+</section>
+
+<!-- ============ NIVELES ============ -->
+<section class="pagina">
+  <h1>6. Niveles</h1>
+  <h2>Nivel 1 — Playa de Samaná (de día · 200 s)</h2>
+  <div class="dos">
+    <div><img class="captura" src="capturas/nivel1_0.png"><div class="pie">Inicio: bloques sorpresa, ladrillos y el primer cangrejo</div></div>
+    <div><img class="captura" src="capturas/nivel1_4.png"><div class="pie">Final: escalera de piedra y la bandera</div></div>
+  </div>
+  <p>Nivel de introducción en la playa con palmeras, casitas de colores y el mar al fondo. Enseña a saltar, golpear bloques y pisar cangrejos. Aparecen los cocos que caen, púas, el primer cactus, una plataforma móvil sobre el mar, plataformas que se caen, murciélagos y un punto de control a la mitad. Música: merengue alegre.</p>
+
+  <h2>Nivel 2 — Cueva de las Maravillas (subterráneo · 200 s)</h2>
+  <div class="dos">
+    <div><img class="captura" src="capturas/nivel2_1.png"><div class="pie">Cristales, agua subterránea y estalactitas</div></div>
+    <div><img class="captura" src="capturas/nivel2_3.png"><div class="pie">Pasillo de techo bajo con cangrejos</div></div>
+  </div>
+  <p>Cueva oscura con techo, cristales azules y hongos brillantes. Más murciélagos, estalactitas que caen, un pasillo de techo bajo, hileras de ladrillos y hoyos con plataformas móviles y plataformas que se caen. Música misteriosa con eco.</p>
+</section>
+
+<section class="pagina">
+  <h2>Nivel 3 — Loma del Galipote (de noche · 240 s · jefe)</h2>
+  <div class="dos">
+    <div><img class="captura" src="capturas/nivel3_1.png"><div class="pie">La loma de noche, con luciérnagas</div></div>
+    <div><img class="captura" src="capturas/nivel3_3.png"><div class="pie">Arena del jefe: el Galipote</div></div>
+  </div>
+  <p>Noche de luna llena con árboles secos y luciérnagas. Primero hay un tramo con todos los enemigos y dos mangos para llegar con más vidas. Al entrar en la <b>arena</b> se cierra una pared detrás de Ciguín, la pantalla tiembla, el Galipote ruge, aparece su barra de vida y <b>cambia la música a la del jefe</b>. Al derrotarlo se pasa a la pantalla de victoria.</p>
+
+  <h2>Reglas de progreso</h2>
+  <table>
+    <tr><th>Situación</th><th>Resultado</th></tr>
+    <tr><td>Completar el nivel 1</td><td>Pasa al nivel 2</td></tr>
+    <tr><td>Completar el nivel 2</td><td>Pasa al nivel 3 (jefe)</td></tr>
+    <tr><td>Derrotar al Galipote</td><td>Pantalla de victoria con puntaje y récord</td></tr>
+    <tr><td>Recibir daño o caer al vacío</td><td>Pierde 1 vida (si cae, reaparece en el punto de control)</td></tr>
+    <tr><td>Quedarse sin vidas (en cualquier nivel)</td><td>Mensaje <b>"¡CIGUÍN HA MUERTO!"</b> con el motivo y <b>vuelve al nivel 1</b></td></tr>
+    <tr><td>Se acaba el tiempo sin completar el nivel</td><td>Mensaje de muerte y <b>vuelve al nivel 1</b></td></tr>
+  </table>
+
+  <h2>Puntuación</h2>
+  <table>
+    <tr><th>Acción</th><th>Puntos</th></tr>
+    <tr><td>Larimar</td><td>100</td></tr>
+    <tr><td>Cangrejo / murciélago</td><td>200 / 300</td></tr>
+    <tr><td>Romper ladrillo</td><td>50</td></tr>
+    <tr><td>Mango</td><td>1000</td></tr>
+    <tr><td>Bandera</td><td>400 a 5000 según la altura</td></tr>
+    <tr><td>Tiempo sobrante</td><td>10 por segundo</td></tr>
+    <tr><td>Derrotar al Galipote</td><td>5000</td></tr>
+  </table>
+</section>
+
+<!-- ============ ESCENAS Y GUION ============ -->
+<section class="pagina">
+  <h1>7. Escenas</h1>
+  <div class="flujo">
+    <div class="caja">Menu</div><span class="flecha">→</span>
+    <div class="caja">Nivel1<br><small>Playa</small></div><span class="flecha">→</span>
+    <div class="caja">Nivel2<br><small>Cueva</small></div><span class="flecha">→</span>
+    <div class="caja">Nivel3<br><small>Loma + jefe</small></div><span class="flecha">→</span>
+    <div class="caja">Victoria</div>
+  </div>
+  <p class="pie">Si Ciguín muere (sin vidas o sin tiempo) en cualquier nivel → mensaje de muerte → <b>Nivel1</b>. Desde la pausa (P) se puede volver al Menú con M.</p>
+  <table>
+    <tr><th>Escena</th><th>Contenido</th></tr>
+    <tr><td><b>Menu</b></td><td>Título, Ciguín y el Galipote animados, botones <i>Jugar</i>, <i>Cómo jugar</i> (controles, objetos y enemigos con dibujos) e <i>Historia</i>; mejor puntaje guardado; música del menú.</td></tr>
+    <tr><td><b>Nivel1, Nivel2, Nivel3</b></td><td>HUD con corazones, larimares, nombre del nivel, puntos, tiempo, nombre y matrícula; mensajes centrales; pausa; barra de vida del jefe en el nivel 3.</td></tr>
+    <tr><td><b>Victoria</b></td><td>Mensaje final, puntos, vidas restantes y récord; música de victoria; vuelve al menú.</td></tr>
+  </table>
+  <div class="dos">
+    <div><img class="captura" src="capturas/menu_controles.png"><div class="pie">Menú: Cómo jugar</div></div>
+    <div><img class="captura" src="capturas/victoria_0.png"><div class="pie">Pantalla de victoria</div></div>
+  </div>
+
+  <h1 style="margin-top:14px">8. Guion</h1>
+  <div class="guion">
+    <p><b>Escena 1 — Menú.</b> Suena una melodía alegre. Ciguín camina a la izquierda y el Galipote sonríe a la derecha. En <i>Historia</i> se cuenta cómo el Galipote robó los larimares.</p>
+    <p><b>Escena 2 — Playa de Samaná.</b> Aparece "NIVEL 1 · PLAYA DE SAMANÁ". Ciguín llega a la playa: las casitas están vacías y los cangrejos del Galipote vigilan la arena. Entre palmeras y bloques encuentra los primeros larimares. Cruza el mar en una tabla que flota y llega a la bandera dominicana.</p>
+    <p><b>Escena 3 — Cueva de las Maravillas.</b> La música se vuelve misteriosa y con eco. En la oscuridad brillan cristales y hongos; los murciélagos atacan desde el techo y las estalactitas se desprenden. Ciguín pasa por un túnel estrecho y sale por la escalera del fondo.</p>
+    <p><b>Escena 4 — Loma del Galipote.</b> Es de noche y hay luna llena. Las luciérnagas iluminan el camino. Al llegar a la cima, una pared de piedra se cierra a sus espaldas, la tierra tiembla y el Galipote ruge: "¡EL GALIPOTE! Sáltale encima para hacerle daño". Cambia la música. Cuando le quedan pocas fuerzas el Galipote se enfurece.</p>
+    <p><b>Escena 5 — Victoria.</b> "¡DERROTASTE AL GALIPOTE!". Ciguín celebra: recuperó los larimares y la paz volvió a la isla. Se muestran los puntos y el récord.</p>
+    <p><b>Si Ciguín muere.</b> La música se corta, suena una melodía triste y aparece "¡CIGUÍN HA MUERTO!" con el motivo (por ejemplo "Un cangrejo pellizcó a Ciguín" o "¡Se acabó el tiempo!"). Luego vuelve al Nivel 1 con 3 vidas.</p>
+  </div>
+</section>
+
+<!-- ============ CONTROLES, SONIDO, TÉCNICO ============ -->
+<section class="pagina">
+  <h1>9. Controles</h1>
+  <table>
+    <tr><th>Acción</th><th>Teclas</th></tr>
+    <tr><td>Moverse</td><td>← → o A D</td></tr>
+    <tr><td>Saltar (mantener para saltar más alto)</td><td>Espacio, ↑, W o Z</td></tr>
+    <tr><td>Correr</td><td>Shift o X</td></tr>
+    <tr><td>Pausa / continuar</td><td>P o Esc (en pausa, M vuelve al menú)</td></tr>
+    <tr><td>Menús</td><td>Enter o el ratón</td></tr>
+  </table>
+
+  <h1 style="margin-top:14px">10. Sonido y música</h1>
+  <p>Toda la música y los efectos son originales, sintetizados al estilo chiptune (onda cuadrada para la melodía, triangular para el bajo, ruido para la percusión).</p>
+  <table>
+    <tr><th>Música</th><th>Dónde suena</th></tr>
+    <tr><td>Tema del menú (Do mayor, 118 bpm)</td><td>Menú de inicio</td></tr>
+    <tr><td>Merengue de la playa (Sol mayor, 150 bpm, con güira)</td><td>Nivel 1</td></tr>
+    <tr><td>Cueva (La menor, 104 bpm, con eco)</td><td>Nivel 2</td></tr>
+    <tr><td>Noche en la loma (Re menor, 128 bpm)</td><td>Nivel 3</td></tr>
+    <tr><td><b>Tema del jefe</b> (Mi menor, 168 bpm) — <b>distinta</b></td><td>Al entrar a la arena del Galipote</td></tr>
+    <tr><td>Victoria (fanfarria)</td><td>Pantalla final</td></tr>
+  </table>
+  <p><b>Efectos (20):</b> salto, larimar, aplastar, daño, golpe de bloque, romper ladrillo, aparece objeto, mango, vida extra, disparo de espina, bola de fuego, golpe al jefe, rugido, temblor, caída, punto de control, pausa, botón, muerte y nivel completado.</p>
+
+  <h1 style="margin-top:14px">11. Estructura técnica</h1>
+  <table>
+    <tr><th>Script</th><th>Función</th></tr>
+    <tr><td><code>Juego</code></td><td>Datos que pasan de una escena a otra (vidas, larimares, puntos, récord) y el audio.</td></tr>
+    <tr><td><code>Nivel</code></td><td>Tiempo límite, HUD, puntos de control, muerte, nivel completado, pausa y jefe.</td></tr>
+    <tr><td><code>Jugador</code> / <code>Entrada</code></td><td>Movimiento, salto variable, pisotón, golpe de bloques y animación por sprites.</td></tr>
+    <tr><td><code>Enemigo</code> (base)</td><td><code>Cangrejo</code>, <code>Murcielago</code>, <code>CactusLanzador</code>, <code>Jefe</code>; <code>ZonaGolpe</code> distingue pisotón y daño.</td></tr>
+    <tr><td><code>Peligro</code>, <code>Proyectil</code>, <code>ObjetoQueCae</code></td><td>Púas, espinas, bolas de fuego, piedras, cocos y estalactitas.</td></tr>
+    <tr><td><code>Bloque</code>, <code>Larimar</code>, <code>Mango</code></td><td>Objetos y bloques.</td></tr>
+    <tr><td><code>PlataformaMovil</code>, <code>PlataformaQueCae</code>, <code>Meta</code>, <code>PuntoControl</code>, <code>ZonaJefe</code></td><td>Elementos del escenario.</td></tr>
+    <tr><td><code>CamaraSeguir</code>, <code>Parallax</code></td><td>Cámara con límites y sacudida; fondos con profundidad.</td></tr>
+    <tr><td><code>Editor/ConstructorProyecto</code></td><td>Genera sprites, sonidos, prefabs y las 5 escenas (menú <i>Ciguin → Construir todo</i>).</td></tr>
+    <tr><td><code>Editor/PruebaAutomatica</code></td><td>Prueba en modo Play que recorre el juego y verifica cada requisito (34 comprobaciones, todas correctas).</td></tr>
+  </table>
+
+  <h1 style="margin-top:14px">12. Enlaces</h1>
+  <div class="nota">
+    <b>Repositorio GitHub:</b> <a href="https://github.com/Christ2723/Ciguin">https://github.com/Christ2723/Ciguin</a><br>
+    <b>Videojuego publicado (GitHub Pages):</b> <a href="https://christ2723.github.io/Ciguin/">https://christ2723.github.io/Ciguin/</a>
+  </div>
+</section>
+
+</body>
+</html>

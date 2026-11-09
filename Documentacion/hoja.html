@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ciguín — Hoja de personajes</title>
+<style>
+  html, body { margin: 0; background: #14162a; color: #fff; font-family: "Segoe UI", Arial, sans-serif; }
+  .hoja { width: 1600px; padding: 34px 40px; box-sizing: border-box; }
+  h1 { margin: 0; font-size: 54px; color: #ffd84a; letter-spacing: 2px; }
+  .sub { font-size: 22px; color: #c9d3ff; margin: 2px 0 22px; }
+  h2 { font-size: 24px; color: #7fd0ff; margin: 22px 0 10px; border-bottom: 2px solid #2c3160; padding-bottom: 4px; }
+  img { image-rendering: pixelated; image-rendering: crisp-edges; }
+  .fila { display: flex; gap: 14px; flex-wrap: wrap; }
+  .carta { background: #1f2340; border: 2px solid #2f3566; border-radius: 12px; padding: 12px; width: 176px; box-sizing: border-box; text-align: center; }
+  .carta img { height: 96px; max-width: 140px; object-fit: contain; }
+  .carta b { display: block; margin-top: 6px; font-size: 18px; }
+  .carta span { font-size: 14px; color: #aab3d8; }
+  .grande { width: 250px; }
+  .grande img { height: 140px; max-width: 220px; }
+  .niveles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .niveles div { background: #1f2340; border-radius: 10px; padding: 8px; font-size: 17px; text-align: center; }
+  .niveles img { width: 100%; border-radius: 6px; image-rendering: auto; }
+  .pie { margin-top: 18px; font-size: 18px; color: #c9d3ff; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="hoja">
+  <h1>CIGUÍN y la Leyenda del Galipote</h1>
+  <div class="sub">Juego de plataformas 2D — Christopher Payero Estrella · Matrícula 1-21-0909 · Programación de Videojuegos</div>
+
+  <h2>Personajes</h2>
+  <div class="fila">
+    <div class="carta grande"><img src="../Assets/Sprites/Ciguin_Quieto.png"><b>Ciguín</b><span>Jugador · cigua palmera</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Ciguin_Paso1.png"><b>Caminar</b><span>animación</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Ciguin_Salto.png"><b>Salto</b><span>animación</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Ciguin_Herido.png"><b>Herido</b><span>animación</span></div>
+    <div class="carta grande"><img src="../Assets/Sprites/Galipote_1.png"><b>El Galipote</b><span>Jefe final (nivel 3)</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Galipote_Ataque.png"><b>Ataque</b><span>jefe</span></div>
+  </div>
+
+  <h2>Enemigos y obstáculos</h2>
+  <div class="fila">
+    <div class="carta"><img src="../Assets/Sprites/Cangrejo_1.png"><b>Cangrejo</b><span>camina, se pisa</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Murcielago_1.png"><b>Murciélago</b><span>vuela en picada</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Cactus_1.png"><b>Cactus</b><span>lanza espinas</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Coco.png"><b>Coco</b><span>cae de la palmera</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Estalactita.png"><b>Estalactita</b><span>cae del techo</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Puas.png"><b>Púas</b><span>trampa</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Plataforma_Cae.png"><b>Plataforma</b><span>que se cae</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Fuego_0.png"><b>Bola de fuego</b><span>del jefe</span></div>
+  </div>
+
+  <h2>Objetos</h2>
+  <div class="fila">
+    <div class="carta"><img src="../Assets/Sprites/Larimar.png"><b>Larimar</b><span>moneda · 50 = vida</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Mango.png"><b>Mango</b><span>+1 vida</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Corazon.png"><b>Corazón</b><span>vidas</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Bloque_Sorpresa1.png"><b>Bloque ?</b><span>sorpresa</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Playa_Ladrillo.png"><b>Ladrillo</b><span>se rompe</span></div>
+    <div class="carta"><img src="../Assets/Sprites/PuntoControl_Activo.png"><b>Control</b><span>punto de control</span></div>
+    <div class="carta"><img src="../Assets/Sprites/Bandera_Meta.png"><b>Meta</b><span>fin del nivel</span></div>
+  </div>
+
+  <h2>Niveles</h2>
+  <div class="niveles">
+    <div><img src="capturas/nivel1_0.png">Nivel 1 · Playa de Samaná</div>
+    <div><img src="capturas/nivel2_1.png">Nivel 2 · Cueva de las Maravillas</div>
+    <div><img src="capturas/nivel3_3.png">Nivel 3 · Loma del Galipote (jefe)</div>
+  </div>
+  <div class="pie"><span>github.com/Christ2723/Ciguin</span><span>christ2723.github.io/Ciguin</span></div>
+</div>
+</body>
+</html>
